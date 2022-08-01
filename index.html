@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Koderz Camp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+    <link href="css/vendor.min.css" rel="stylesheet" />
+    <link href="css/app.min.css" rel="stylesheet" />
+    <link href="css/lity.min.css" rel="stylesheet" />
+    <link href="css/jquery-jvectormap.css" rel="stylesheet" />
+    <link href="css/addon.css" rel="stylesheet" />
+  </head>
+  <body class="pace-top">
+    <div id="app" class="app app-full-height app-without-header">
+      <div class="welcome-page">
+        <div class="welcome-page-content">
+          <div class="card mb-5 mx-auto">
+            <div class="card-body">
+              <div class="card">
+                <div class="welcome-code">
+                  <span class="text-theme">Koderz</span> Camp
+                </div>
+                <div class="card-arrow">
+                  <div class="card-arrow-top-left"></div>
+                  <div class="card-arrow-top-right"></div>
+                  <div class="card-arrow-bottom-left"></div>
+                  <div class="card-arrow-bottom-right"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-arrow">
+              <div class="card-arrow-top-left"></div>
+              <div class="card-arrow-top-right"></div>
+              <div class="card-arrow-bottom-left"></div>
+              <div class="card-arrow-bottom-right"></div>
+            </div>
+          </div>
+          <div>
+            <h1 class="p-3">
+              Build
+              <span
+                class="text-theme typed-text fw-400"
+                data-typed-text='["beautiful","gorgeous","outstanding","remarkable","stunning"]'
+              ></span>
+              websites!
+            </h1>
+            <h3 class="d-none d-sm-none d-md-block">
+              We aim to provide, in time, the largest useful collection of web
+              development code snippets on the web.
+            </h3>
+            <hr class="d-none d-sm-none d-md-block pt-10px" />
+            <p class="mb-1 p-5 d-none d-sm-none d-md-block">
+              Code snippets for easier coding!
+            </p>
+
+            <a href="#start" class="btn btn-outline-theme p-4 rounded-pill"
+              ><h2 class="m-0">START NOW</h2></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- About-->
+      <section class="page-section bg-white" id="start">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="section-heading text-uppercase text-theme">
+              How to become a Web Developer?
+            </h2>
+            <h3 class="section-subheading text-muted">
+              Start learning the following languages in the sequence listed
+              below to become a web developer..
+            </h3>
+          </div>
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image d-none d-sm-none d-md-block">
+                <img
+                  class="rounded-circle img-fluid"
+                  src="images/1.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading text-theme">
+                  <h4>HTML</h4>
+                  <h4 class="subheading text-muted">
+                    1. Build your first website
+                  </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    You should start by learning HTML, the common markup
+                    language used to create web pages.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image d-none d-sm-none d-md-block">
+                <img
+                  class="rounded-circle img-fluid"
+                  src="images/2.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading text-theme">
+                  <h4>CSS</h4>
+                  <h4 class="subheading text-muted">2. Style your web page</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    Learning CSS will enable you to set the layout of your
+                    website with lovely colors, fonts, and more.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image d-none d-sm-none d-md-block">
+                <img
+                  class="rounded-circle img-fluid"
+                  src="images/3.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading text-theme">
+                  <h4>JavaScript</h4>
+                  <h4 class="subheading text-muted">
+                    3. Your website should be interactive.
+                  </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    You should learn JavaScript after studying HTML and CSS so
+                    that you can build dynamic, engaging web sites for your
+                    users.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image d-none d-sm-none d-md-block">
+                <img
+                  class="rounded-circle img-fluid"
+                  src="images/4.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading text-theme">
+                  <h4>Web Hosting</h4>
+                  <h4 class="subheading text-muted">
+                    Put your website online.
+                  </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    You now understand how to design, style, and construct
+                    interactive web pages using HTML, CSS, and JavaScript.
+                  </p>
+                  <p class="text-muted p-1">
+                    In order for the rest of the world to view your work, the
+                    next step is to publish your website.
+                  </p>
+                  <p class="text-muted">
+                    There are numerous hosting options available. Additionally,
+                    you can locate several hostings that are free.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image d-none d-sm-none d-md-block">
+                <a href="login.html">
+                  <img
+                    class="rounded-circle img-fluid"
+                    src="images/5.jpg"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading text-theme">
+                  <h4>Start building your website now!</h4>
+                  <h4
+                    class="subheading text-muted d-block d-sm-block d-md-none"
+                  >
+                    To start, <a href="login.html">Click Here!</a>
+                  </h4>
+                  <h4 class="subheading text-muted d-none d-sm-none d-md-block">
+                    Click the Start button >>
+                  </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    And you will be redirected to the Koderz Camp area!
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Team-->
+      <section class="page-section bg-light" id="team">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="section-heading text-uppercase text-dark">
+              The Founder
+            </h2>
+            <h3 class="section-subheading text-muted">
+              Meet the individual who made it all happen.
+            </h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="team-member">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="images/profile.jpg"
+                  alt="..."
+                />
+                <h4 class="text-dark">Joel P. Hayag</h4>
+                <p class="text-muted">Full Stack Web Developer</p>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="#!"
+                  aria-label="Parveen Anand Twitter Profile"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="#!"
+                  aria-label="Parveen Anand Facebook Profile"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="#!"
+                  aria-label="Parveen Anand LinkedIn Profile"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="flex-1 m-3">
+        <div class="row">
+          <div class="col-lg-12 mx-auto text-center">
+            <p class="large text-dark">
+              <a href="index.html">Home</a> | <a href="#!">About</a> |
+              <a href="#!">Resources</a> | <a href="#!">Contact</a> |
+              <a href="login.html">Login</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="text-center small text-white text-opacity-50"
+          style="padding-bottom: 1rem"
+        >
+          &copy; 2022 KoderzCamp. All Rights Reserved.
+        </div>
+      </div>
+      <a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"
+        ><i class="fa fa-arrow-up"></i
+      ></a>
+
+      <div class="app-theme-panel">
+        <div class="app-theme-panel-container">
+          <a
+            href="javascript:;"
+            data-toggle="theme-panel-expand"
+            class="app-theme-toggle-btn"
+            ><i class="bi bi-sliders"></i
+          ></a>
+          <div class="app-theme-panel-content">
+            <div class="small fw-bold text-white mb-1">Theme Color</div>
+            <div class="card mb-3">
+              <div class="card-body p-2">
+                <div class="app-theme-list">
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-pink"
+                      data-theme-class="theme-pink"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Pink"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-red"
+                      data-theme-class="theme-red"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Red"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-warning"
+                      data-theme-class="theme-warning"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Orange"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-yellow"
+                      data-theme-class="theme-yellow"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Yellow"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-lime"
+                      data-theme-class="theme-lime"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Lime"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-green"
+                      data-theme-class="theme-green"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Green"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item active">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-teal"
+                      data-theme-class=""
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Default"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-info"
+                      data-theme-class="theme-info"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cyan"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-primary"
+                      data-theme-class="theme-primary"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Blue"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-purple"
+                      data-theme-class="theme-purple"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Purple"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-indigo"
+                      data-theme-class="theme-indigo"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Indigo"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-gray-100"
+                      data-theme-class="theme-gray-200"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Gray"
+                      >&nbsp;</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+              </div>
+            </div>
+            <div class="small fw-bold text-white mb-1">Theme Cover</div>
+            <div class="card">
+              <div class="card-body p-2">
+                <div class="app-theme-cover">
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-1.gif)"
+                      data-theme-cover-class="bg-cover-1"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 1"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-2.gif)"
+                      data-theme-cover-class="bg-cover-2"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 2"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-3.gif)"
+                      data-theme-cover-class="bg-cover-3"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 3"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-4.jpg)"
+                      data-theme-cover-class="bg-cover-4"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 4"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-5.jpg)"
+                      data-theme-cover-class="bg-cover-5"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 5"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-6.jpg)"
+                      data-theme-cover-class="bg-cover-6"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 6"
+                      >&nbsp;</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/lity.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/highlightjs.demo.js"></script>
+    <script src="js/sidebar-scrollspy.demo.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/typed.min.js"></script>
+  </body>
+</html>

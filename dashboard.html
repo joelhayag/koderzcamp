@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Koderz Camp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+    <link href="css/vendor.min.css" rel="stylesheet" />
+    <link href="css/app.min.css" rel="stylesheet" />
+    <link href="css/lity.min.css" rel="stylesheet" />
+    <link href="css/jquery-jvectormap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <div id="header" class="app-header">
+        <div class="desktop-toggler">
+          <button
+            type="button"
+            class="menu-toggler"
+            data-toggle-class="app-sidebar-collapsed"
+            data-dismiss-class="app-sidebar-toggled"
+            data-toggle-target=".app"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <div class="mobile-toggler">
+          <button
+            type="button"
+            class="menu-toggler"
+            data-toggle-class="app-sidebar-mobile-toggled"
+            data-toggle-target=".app"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <div class="brand">
+          <a href="#" class="brand-logo">
+            <span class="brand-img">
+              <span
+                class="brand-img-text text-theme d-none d-sm-none d-md-block"
+                >KODERZ</span
+              >
+              <span class="brand-text d-none d-sm-none d-md-block">Camp</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="menu">
+          <div class="menu-item dropdown">
+            <a
+              href="#"
+              data-toggle-class="app-header-menu-search-toggled"
+              data-toggle-target=".app"
+              class="menu-link"
+            >
+              <div class="menu-icon"><i class="bi bi-search nav-icon"></i></div>
+            </a>
+          </div>
+
+          <div class="menu-item">
+            <a href="dashboard.html" class="menu-link">
+              <i class="bi bi-grid-3x3 pe-4px text-theme"></i>
+              <div class="menu-text d-sm-block d-none">
+                <span class="menu-text text-theme">Dashboard</span>
+              </div>
+            </a>
+          </div>
+          <div class="menu-item dropdown dropdown-mobile-full">
+            <a
+              href="#"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              class="menu-link"
+              aria-expanded="false"
+            >
+              <div class="menu-img online">
+                <img src="images/profile.jpg" alt="Profile" height="60" />
+              </div>
+              <div class="menu-text d-sm-block d-none">joel@domain.com</div>
+            </a>
+          </div>
+          <div class="menu-item">
+            <a href="logout.html" class="menu-link">
+              <i class="bi bi-box-arrow-right pe-4px"></i>
+              <div class="menu-text d-sm-block d-none">
+                <span class="menu-text">Logout</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="menu-search" method="POST" name="header_search_form">
+          <div class="menu-search-container">
+            <div class="menu-search-icon"><i class="bi bi-search"></i></div>
+            <div class="menu-search-input">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Search menu..."
+              />
+            </div>
+            <div class="menu-search-icon">
+              <a
+                href="#"
+                data-toggle-class="app-header-menu-search-toggled"
+                data-toggle-target=".app"
+                ><i class="bi bi-x-lg"></i
+              ></a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="sidebar" class="app-sidebar">
+        <div
+          class="app-sidebar-content"
+          data-scrollbar="true"
+          data-height="100%"
+        >
+          <div class="menu">
+            <div class="menu-header">3 Main Web Languages</div>
+            <div class="menu-item active">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"
+                  ><i class="bi bi-filetype-html"></i
+                ></span>
+                <span class="menu-text">HTML</span>
+              </a>
+            </div>
+            <div class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"
+                  ><i class="bi bi-filetype-css"></i
+                ></span>
+                <span class="menu-text">CSS</span>
+              </a>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon">
+                  <i class="bi bi-filetype-js"></i>
+                </span>
+                <span class="menu-text">JavaScript</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">JS Home</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">JS Versions</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">JS Objects</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-header">Advance Web Technologies</div>
+            <div class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"><i class="bi bi-filetype-py"></i></span>
+                <span class="menu-text">Python</span>
+              </a>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="javascript:;" class="menu-link">
+                <div class="menu-icon">
+                  <i class="bi bi-server"></i>
+                  <span
+                    class="w-5px h-5px rounded-3 bg-theme position-absolute top-0 end-0 mt-3px me-3px"
+                  ></span>
+                </div>
+                <div class="menu-text d-flex align-items-center">SQL</div>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" target="_blank" class="menu-link">
+                    <div class="menu-text">SQL Intro</div>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" target="_blank" class="menu-link">
+                    <div class="menu-text">SQL Database</div>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" target="_blank" class="menu-link">
+                    <div class="menu-text">SQL References</div>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" target="_blank" class="menu-link">
+                    <div class="menu-text">SQL Examples</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"
+                  ><i class="bi bi-filetype-php"></i
+                ></span>
+                <span class="menu-text">PHP</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">PHP Intro</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">PHP Forms</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">PHP Advanced</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">PHP OOP</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">MySQL Database</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">PHP XML</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">PHP - AJAX</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"
+                  ><i class="bi bi-filetype-java"></i
+                ></span>
+                <span class="menu-text">Java</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Java Intro</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Java Methods</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Java Classes</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"
+                  ><i class="bi bi-journal-code"></i
+                ></span>
+                <span class="menu-text">jQuery</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">jQuery Intro</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">jQuery HTML</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">jQuery Traversing</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">jQuery AJAX</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"><i class="bi bi-bootstrap"></i></span>
+                <span class="menu-text">Bootstrap</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Bootstrap Intro</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Bootstrap 5 Forms</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Bootstrap 5 Grid</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Bootstrap 5 Other</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"><i class="bi bi-node-plus"></i></span>
+                <span class="menu-text">Node.js</span>
+              </a>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"><i class="bi bi-slack"></i></span>
+                <span class="menu-text">React</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">React Intro</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">React Hooks</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">React Exercises</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item has-sub">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"><i class="bi bi-shuffle"></i></span>
+                <span class="menu-text">Kotlin</span>
+                <span class="menu-caret"><b class="caret"></b></span>
+              </a>
+              <div class="menu-submenu">
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Kotlin Intro</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Kotlin Classes</span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-text">Kotlin Examples</span>
+                  </a>
+                </div>
+              </div>
+              <div class="menu-header">User</div>
+              <div class="menu-item">
+                <a href="#" class="menu-link">
+                  <span class="menu-icon"><i class="bi bi-people"></i></span>
+                  <span class="menu-text">Profile</span>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#" class="menu-link">
+                  <span class="menu-icon"><i class="bi bi-gear"></i></span>
+                  <span class="menu-text">Settings</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="app-sidebar-mobile-backdrop"
+        data-toggle-target=".app"
+        data-toggle-class="app-sidebar-mobile-toggled"
+      ></button>
+
+      <div id="content" class="app-content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-12">
+              <div class="row">
+                <div class="col-xl-9">
+                  <h1 class="page-header">
+                    HTML5 Snippets:
+                    <small>The Most Useful Ready-to-use Examples...</small>
+                  </h1>
+                  <hr class="mb-4" />
+
+                  <div id="starterTemplate" class="mb-5">
+                    <p>
+                      HTML is super easy to write, but when creating webpages
+                      you often need to do the same repetitive tasks, such as
+                      creating forms.
+                    </p>
+                    <p>
+                      When constructing a web page and trying to avoid
+                      reinventing the wheel, snippets are useful. By giving you
+                      tried-and-true techniques for achieving the desired
+                      results, these little blocks of code can shorten the time
+                      it takes to construct the front-end of your website.
+                    </p>
+
+                    <h4>Starter Template</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <p>
+                              When starting a new project, you need a starter
+                              template. Here is a concise and clean template to
+                              serve as a basis for your HTML5 projects.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-arrow">
+                        <div class="card-arrow-top-left"></div>
+                        <div class="card-arrow-top-right"></div>
+                        <div class="card-arrow-bottom-left"></div>
+                        <div class="card-arrow-bottom-right"></div>
+                      </div>
+                      <div class="hljs-container">
+                        <pre>
+                          <code class="xml" id="myInput">&#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  &#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+    &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+    &#x3C;title&#x3E;Document&#x3C;/title&#x3E;
+  &#x3C;/head&#x3E;
+  &#x3C;body&#x3E;
+    
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</code>
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="autocompleteDatalists" class="mb-5">
+                    <h4>Autocompletion with HTML5 datalists</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <p>
+                              Using the <code>datalist</code> element, HTML5
+                              allows you to create a list of data to
+                              autocomplete an input field. Super useful!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-arrow">
+                        <div class="card-arrow-top-left"></div>
+                        <div class="card-arrow-top-right"></div>
+                        <div class="card-arrow-bottom-left"></div>
+                        <div class="card-arrow-bottom-right"></div>
+                      </div>
+                      <div class="hljs-container">
+                        <pre><code class="xml">
+&#x3C;input name=&#x22;frameworks&#x22; list=&#x22;frameworks&#x22; /&#x3E;
+
+&#x3C;datalist id=&#x22;frameworks&#x22;&#x3E;
+&#x9;&#x3C;option value=&#x22;MooTools&#x22;&#x3E;
+&#x9;&#x3C;option value=&#x22;Moobile&#x22;&#x3E;
+&#x9;&#x3C;option value=&#x22;Dojo Toolkit&#x22;&#x3E;
+&#x9;&#x3C;option value=&#x22;jQuery&#x22;&#x3E;
+&#x9;&#x3C;option value=&#x22;YUI&#x22;&#x3E;
+&#x3C;/datalist&#x3E;
+                      </code></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="readyReset" class="mb-5">
+                    <h4>HTML5 ready reset</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <p>
+                              Plenty of you will have used Eric Meyer’s css
+                              reset before now. It is included in many
+                              frameworks and so on, like <code>960.gs</code>.
+                              This is a revamped version of that reset, that
+                              brings it into the present with full support for
+                              html5. It sets all the new structural tags as
+                              block level, and resets all their default styling
+                              as expected.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-arrow">
+                        <div class="card-arrow-top-left"></div>
+                        <div class="card-arrow-top-right"></div>
+                        <div class="card-arrow-bottom-left"></div>
+                        <div class="card-arrow-bottom-right"></div>
+                      </div>
+                      <div class="hljs-container">
+                        <pre><code class="xml">
+/*   html5doctor.com Reset Stylesheet (Eric Meyer&#x27;s Reset Reloaded + HTML5 baseline)  v1.4 2009-07-27 | Authors: Eric Meyer &#x26; Richard Clark  html5doctor.com/html-5-reset-stylesheet/*/
+html, body, div, span, object, iframe,
+h1, h2, h2, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:&#x27;&#x27;; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+/* tables still need cellspacing=&#x22;0&#x22; in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+                      </code></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div id="readyReset" class="mb-5">
+                    <h4>HTML5 ready reset</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <p>
+                              Plenty of you will have used Eric Meyer’s css
+                              reset before now. It is included in many
+                              frameworks and so on, like <code>960.gs</code>.
+                              This is a revamped version of that reset, that
+                              brings it into the present with full support for
+                              html5. It sets all the new structural tags as
+                              block level, and resets all their default styling
+                              as expected.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-arrow">
+                        <div class="card-arrow-top-left"></div>
+                        <div class="card-arrow-top-right"></div>
+                        <div class="card-arrow-bottom-left"></div>
+                        <div class="card-arrow-bottom-right"></div>
+                      </div>
+                      <div class="hljs-container">
+                        <pre><code class="xml">
+/*   html5doctor.com Reset Stylesheet (Eric Meyer&#x27;s Reset Reloaded + HTML5 baseline)  v1.4 2009-07-27 | Authors: Eric Meyer &#x26; Richard Clark  html5doctor.com/html-5-reset-stylesheet/*/
+html, body, div, span, object, iframe,
+h1, h2, h2, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:&#x27;&#x27;; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+/* tables still need cellspacing=&#x22;0&#x22; in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+                      </code></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-xl-3">
+                  <nav
+                    id="sidebar-bootstrap"
+                    class="navbar navbar-sticky d-none d-xl-block"
+                  >
+                    <nav class="nav">
+                      <a
+                        class="nav-link"
+                        href="#starterTemplate"
+                        data-toggle="scroll-to"
+                        >Starter Template</a
+                      >
+                      <a
+                        class="nav-link"
+                        href="#autocompleteDatalists"
+                        data-toggle="scroll-to"
+                        >Autocomplete Datalists</a
+                      >
+                      <a
+                        class="nav-link"
+                        href="#readyReset"
+                        data-toggle="scroll-to"
+                        >HTML5 ready reset</a
+                      >
+                    </nav>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 mb-3">
+        <div
+          class="text-center small text-white text-opacity-50"
+          style="padding-bottom: 1rem"
+        >
+          &copy; 2022 KODERZCamp. All Rights Reserved.
+        </div>
+      </div>
+
+      <a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"
+        ><i class="fa fa-arrow-up"></i
+      ></a>
+
+      <div class="app-theme-panel">
+        <div class="app-theme-panel-container">
+          <a
+            href="javascript:;"
+            data-toggle="theme-panel-expand"
+            class="app-theme-toggle-btn"
+            ><i class="bi bi-sliders"></i
+          ></a>
+          <div class="app-theme-panel-content">
+            <div class="small fw-bold text-white mb-1">Theme Color</div>
+            <div class="card mb-3">
+              <div class="card-body p-2">
+                <div class="app-theme-list">
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-pink"
+                      data-theme-class="theme-pink"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Pink"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-red"
+                      data-theme-class="theme-red"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Red"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-warning"
+                      data-theme-class="theme-warning"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Orange"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-yellow"
+                      data-theme-class="theme-yellow"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Yellow"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-lime"
+                      data-theme-class="theme-lime"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Lime"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-green"
+                      data-theme-class="theme-green"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Green"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item active">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-teal"
+                      data-theme-class=""
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Default"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-info"
+                      data-theme-class="theme-info"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cyan"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-primary"
+                      data-theme-class="theme-primary"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Blue"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-purple"
+                      data-theme-class="theme-purple"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Purple"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-indigo"
+                      data-theme-class="theme-indigo"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Indigo"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-list-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-list-link bg-gray-100"
+                      data-theme-class="theme-gray-200"
+                      data-toggle="theme-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Gray"
+                      >&nbsp;</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+              </div>
+            </div>
+            <div class="small fw-bold text-white mb-1">Theme Cover</div>
+            <div class="card">
+              <div class="card-body p-2">
+                <div class="app-theme-cover">
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-1.gif)"
+                      data-theme-cover-class="bg-cover-1"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 1"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-2.gif)"
+                      data-theme-cover-class="bg-cover-2"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 2"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-3.gif)"
+                      data-theme-cover-class="bg-cover-3"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 3"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-4.jpg)"
+                      data-theme-cover-class="bg-cover-4"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 4"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-5.jpg)"
+                      data-theme-cover-class="bg-cover-5"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 5"
+                      >&nbsp;</a
+                    >
+                  </div>
+                  <div class="app-theme-cover-item">
+                    <a
+                      href="javascript:;"
+                      class="app-theme-cover-link"
+                      style="background-image: url(images/cover-thumb-6.jpg)"
+                      data-theme-cover-class="bg-cover-6"
+                      data-toggle="theme-cover-selector"
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="hover"
+                      data-bs-container="body"
+                      data-bs-title="Cover 6"
+                      >&nbsp;</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/lity.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/highlightjs.demo.js"></script>
+    <script src="js/sidebar-scrollspy.demo.js"></script>
+  </body>
+</html>
